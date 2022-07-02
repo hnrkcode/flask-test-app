@@ -1,4 +1,6 @@
-## Install dependencies
+## Configuring AWS EC2 instance
+
+### Install dependencies
 
 ```
 sudo apt-get update
@@ -18,7 +20,7 @@ pip install -r requirements.txt
 
 
 
-## Configure gunicorn
+### Configure gunicorn
 
 ```
 sudo nano /etc/systemd/system/flask-test-app.service
@@ -47,7 +49,7 @@ sudo systemctl start flask-test-app
 sudo systemctl enable flask-test-app
 ```
 
-## Configure nginx
+### Configure nginx
 
 ```
 sudo apt-get -y update && sudo apt-get -y install nginx
@@ -89,7 +91,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-## Configure HTTPS
+### Configure HTTPS
 
 ```
 sudo snap install --classic certbot
