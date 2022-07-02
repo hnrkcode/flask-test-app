@@ -88,3 +88,11 @@ sudo ln -s /etc/nginx/sites-available/flask-test-app /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
 ```
+
+## Configure HTTPS
+
+```
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --nginx -d your_domain -d www.your_domain
+```
