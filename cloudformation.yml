@@ -85,9 +85,10 @@ Resources:
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
       UserData:
-        Fn::Base64: !Sub |
-          #!/bin/bash
-          git clone https://github.com/hnrkcode/flask-test-app.git
-          cd flask-test-app
-          chmod +x ec2-config-script.sh
-          ./ec2-config-script.sh
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash -xe
+            git clone https://github.com/hnrkcode/flask-test-app.git
+            cd flask-test-app
+            chmod +x ec2-config-script.sh
+            ./ec2-config-script.sh
